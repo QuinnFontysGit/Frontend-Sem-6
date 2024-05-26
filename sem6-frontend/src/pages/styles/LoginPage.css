@@ -1,0 +1,31 @@
+.LoginContainer{
+    width: calc(100% - 64px);
+    display: flex;
+    flex-direction: row;
+    margin: 32px;
+}
+
+.FormBox{
+    background-color: #041643;
+    height: 570px;
+    width: 75%;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.HeroBox{
+    width: 25%;
+    background-color: #ddf5f9;
+    border-radius: 16px;
+}
+
+.HeroText{
+    font-size: 80px;
+}
+
+.TitleText{
+    font-size: 64px;
+    color: #f1f1f1;
+    float: left;
+}

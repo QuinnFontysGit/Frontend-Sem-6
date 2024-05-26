@@ -1,0 +1,24 @@
+.FormContainer{
+    padding: 32px;
+}
+
+.FormText{
+    color: #f1f1f1;
+    font-size: 24px;
+}
+
+.input{
+    width: 65%;
+    height: 30px;
+    font-size: 24px;
+    margin: 8px;
+}
+
+.LoginButton{
+    width: 20%;
+    height: 50px;
+    border: none;
+    background-color: #f1f1f1;
+    font-size: 28px;
+    margin-top: 16px;
+}

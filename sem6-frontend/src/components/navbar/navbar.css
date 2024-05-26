@@ -1,0 +1,15 @@
+.NavbarContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #041643;
+    height: 60px;
+}
+
+.NavOption{
+    background-color: #f1f1f1;
+    width: fit-content;
+    padding: 8px;
+    margin: 0px 4px 0px 4px;
+    font-size: 24px;
+}
