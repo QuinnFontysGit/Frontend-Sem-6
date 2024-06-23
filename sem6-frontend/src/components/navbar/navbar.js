@@ -7,13 +7,13 @@ return (
   <div className='PageContainer'>
     <div className="NavbarContainer">
       <div className="NavOption">
-        home
+        Home
       </div>
       <div className="NavOption">
-        home 2 electric boogaloo
+        Listings
       </div>
-      <div className="NavOption">
-        el home 3
+      <div className="NavOptionRight">
+        You
       </div>
     </div>
     <Outlet />

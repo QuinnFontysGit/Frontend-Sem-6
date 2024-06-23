@@ -7,6 +7,7 @@
 
 .FormBox{
     background-color: #041643;
+    align-items: center;
     height: 570px;
     width: 75%;
     border-radius: 16px;
@@ -28,4 +29,11 @@
     font-size: 64px;
     color: #f1f1f1;
     float: left;
+}
+
+.LogButton{
+    width: 40%;
+    height: 10%;
+    font-size: 40px;
+    margin-top: 100px;
 }

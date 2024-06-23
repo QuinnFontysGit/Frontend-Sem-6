@@ -1,0 +1,42 @@
+version: '3.8'
+services:
+  frontend:
+    build: .
+    image: individualsem6.azurecr.io/sem6frontend:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+
+  kong-database:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: kong
+      POSTGRES_USER: kong
+      POSTGRES_PASSWORD: kong
+    ports:
+      - "5432:5432"
+
+  kong:
+    image: kong/kong-gateway:3.7.0.0
+    depends_on:
+      - kong-database
+    environment:
+      KONG_DATABASE: postgres
+      KONG_PG_HOST: kong-database
+      KONG_PG_USER: kong
+      KONG_PG_PASSWORD: kong
+      KONG_DECLARATIVE_CONFIG: /usr/local/kong/declarative/kong.yaml
+      KONG_ADMIN_LISTEN: "0.0.0.0:8001"
+      KONG_ADMIN_GUI_URL: "http://localhost:8002"
+    command: sh -c "kong migrations bootstrap && /usr/local/bin/kong start"
+    ports:
+      - "8000:8000"
+      - "8443:8443"
+      - "8001:8001"
+      - "8444:8444"
+      - "8002:8002"
+    volumes:
+      - ./kong.yaml:/usr/local/kong/declarative/kong.yaml
+    restart: always
+

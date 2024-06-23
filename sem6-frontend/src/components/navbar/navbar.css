@@ -7,9 +7,30 @@
 }
 
 .NavOption{
-    background-color: #f1f1f1;
     width: fit-content;
     padding: 8px;
     margin: 0px 4px 0px 4px;
     font-size: 24px;
+    cursor: pointer;
+}
+
+.NavOption:hover{
+    background-color: aliceblue;
+    color:#041643;
+    transition-duration: 500ms;
+}
+
+.NavOptionRight{
+    width: fit-content;
+    padding: 8px;
+    margin: 0px 4px 0px 4px;
+    font-size: 24px;
+    float: right;
+    cursor: pointer;
+}
+
+.NavOptionRight:hover{
+    background-color: aliceblue;
+    color:#041643;
+    transition-duration: 500ms;
 }

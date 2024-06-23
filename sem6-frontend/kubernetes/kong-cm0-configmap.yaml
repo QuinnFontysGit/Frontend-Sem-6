@@ -1,0 +1,26 @@
+apiVersion: v1
+data:
+  kong.yaml: |+
+    _format_version: "2.1"
+    services:
+      - name: company-service
+        url: http://companybackend:3030
+        routes:
+          - name: company-route
+            paths:
+              - /companyapi
+
+      - name: listing-service
+        url: http://listingbackend:3020
+        routes:
+          - name: listing-route
+            paths:
+              - /listingapi
+
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: kong
+  name: kong-cm0
